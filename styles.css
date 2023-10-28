@@ -1,0 +1,105 @@
+/** @format */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	/* background: rgb(131, 58, 180); */
+	background: linear-gradient(
+		90deg,
+		rgba(242, 148, 9, 1) 0%,
+		rgba(126, 0, 255, 1) 100%
+	);
+
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.weather {
+	background-color: white;
+	min-height: 60vh;
+	height: auto;
+	width: 70vw;
+	border-radius: 10px;
+}
+
+.sevenDaysInfo {
+	padding-top: 4%;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	row-gap: 10px;
+}
+
+.day {
+	/* float: left; */
+	border: 1px solid #000;
+	height: auto;
+	box-sizing: border-box;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.dayName {
+	text-align: center;
+}
+
+.windDirectionAndSpeed {
+	display: flex;
+}
+
+.windSpeed {
+	width: auto;
+	display: inline-block;
+}
+
+.windDirectionBox {
+	width: 20px;
+	position: relative;
+}
+
+.windDirection {
+	position: absolute;
+	transform: scale(0.2);
+	width: 80px;
+	height: 60px;
+	bottom: -21px;
+	left: -29px;
+}
+
+.arrow {
+	position: absolute;
+	top: 25px;
+	width: 90%;
+	height: 10px;
+	background-color: #000;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	animation: arrow 700ms linear infinite;
+}
+
+.arrow::after,
+.arrow::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 10px;
+	right: -8px;
+	background-color: #000;
+}
+
+.arrow::after {
+	top: -12px;
+	transform: rotate(45deg);
+}
+
+.arrow::before {
+	top: 12px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	transform: rotate(-45deg);
+}
